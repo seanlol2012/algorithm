@@ -1,0 +1,43 @@
+#include <cctype>
+#include <ctype.h>
+
+//对字符进行处理
+
+isalnum(c)	//当c是字母或数字时为真
+isalpha(c)	//当c是字母时为真
+isdigit(c)	//当c是数字时为真
+islower(c)	//当c是小写字母时为真
+isupper(c)	//当c是大写字母时为真
+isspace(c)	//当c是空白时为真
+ispunct(c)	//当c是标点时为真
+
+tolower(c)	//输出对应小写
+toupper(c)	//输出对应大写
+
+
+//初始化string
+string s1
+string s2(s1)
+string s3("value")
+string s3 = "value"
+string s4(n, 'c')
+
+//初始化vector
+vector<T> v1
+vector<T> v2(v1)
+vector<T> v2 = v1
+vector<T> v3(n, val)
+vector<T> v4(n)
+vector<T> v5{a,b,c...}
+vector<T> v5 = {a,b,c...}
+
+int main() {
+    vector<int> container;
+    container.push_back(1);
+    container.push_back(2);
+    container.push_back(3);
+    container.push_back(4);
+    for(vector<int>::iterator it = container.begin(); it != container.end(); ++it)
+        cout << *it << endl;
+    return 0;
+}

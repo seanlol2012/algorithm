@@ -1,0 +1,118 @@
+int compare( const void *a, const void *b )
+{
+    return *(int *)a - *(int *)b;
+}
+
+int cmp( const void *a , const void *b )
+
+{
+    return *(char *)a - *(char *)b;
+
+}
+
+int cmp( const void *a , const void *b )
+
+{
+
+    return *(double *)a > *(double *)b ? 1 : -1;
+
+    //返回值的问题，显然cmp返回的是一个整型，所以避免double返回小数而被丢失，用一个判断返回值。
+
+}
+
+int main() {
+    int a[] = {5,6,4,3,7,0,8,9,2,1};
+    qsort(a, 10, sizeof(a[0]), compare);
+    for(int i=0; i<10; i++) {
+        cout << a[i] << endl;
+    }
+    return 0;
+}
+
+//对结构体一级排序
+struct In
+{
+    double data;
+    int other;
+};
+
+In s[100];
+
+int compare(const void *a, const void *b)
+{
+    struct In *aa = (In*)a;
+    struct In *bb = (In*)b;
+    return aa->data > bb->data ? 1:-1;
+}
+
+int main() {
+    qsort(s, 100, sizeof(s[0]), compare);
+    return 0;
+}
+
+//对结构体二级排序
+struct In
+{
+    int x;
+    int y;
+};
+
+In s[100];
+
+int compare(const void *a, const void *b)
+{
+    struct In *aa = (In*)a;
+    struct In *bb = (In*)b;
+    if(aa->x != bb->x)
+        return aa->x - bb->x;
+    else
+        return aa->y - bb->y;
+}
+
+int main() {
+    qsort(s, 100, sizeof(s[0]), compare);
+    return 0;
+}
+
+//对字符串排序
+struct In
+
+{
+
+    int data;
+
+    char str[100];
+
+}s[100];
+
+//按照结构体中字符串str的字典顺序排序
+
+int cmp ( const void *a , const void *b )
+
+{
+
+    return strcmp( (*(In *)a)->str , (*(In *)b)->str );
+
+}
+
+qsort(s,100,sizeof(s[0]),cmp);
+
+
+//sort
+#include<iostream>
+#include<algorithm>
+
+using namespace std;
+
+int main()
+
+{
+    int a[20];
+　　for(int i=0;i<20;++i)
+        cin>>a[i];
+    sort(a,a+20);
+    for(i=0;i<20;i++)
+        cout<<a[i]<<endl;
+
+    return 0;
+}

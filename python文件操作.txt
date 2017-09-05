@@ -1,0 +1,9 @@
+fp = open('image_bbox.txt','r')
+fw = open('image_bbox_new.txt','a+')
+
+lines = fp.readlines()
+
+for line in lines:
+    now_str = line
+    now_str1,now_str2 = now_str.split(' ',1)
+    fw.write(now_str2)

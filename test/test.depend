@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1503925106 source:d:\论文和资料\算法程序\test\main.cpp
+	<iostream>
+	<vector>
+	<math.h>
+	<string>
+	<string.h>
+	<stdio.h>
+	<stdlib.h>
+	<algorithm>
+	<cctype>
+

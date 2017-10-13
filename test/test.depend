@@ -1,7 +1,8 @@
 # depslib dependency file v1.0
-1504596077 source:d:\论文和资料\算法程序\test\main.cpp
+1507811225 source:d:\论文和资料\算法程序\test\main.cpp
 	<iostream>
 	<vector>
+	<list>
 	<math.h>
 	<string>
 	<string.h>
